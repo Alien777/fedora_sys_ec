@@ -1,0 +1,25 @@
+#!/bin/bash
+
+kernel=$(uname -r)
+srcKernel=kernel-${kernel%.*}.src.rpm
+version=${kernel%%'-'*}
+buildPath=~/rpmbuild/BUILD/kernel-${kernel%-*}/linux-$kernel
+sentenceToReplace=${kernel:${#ver}:${#kernel}}
+searchSentence='EXTRAVERSION ='
+machine=$(uname -m)
+
+rpmdev-setuptree
+yumdownloader --source kernel
+
+sudo yum-builddep $srcKernel
+rpm -Uvh $srcKernel
+cd ~/rpmbuild/SPECS
+rpmbuild -bp --target=$machine kernel.spec
+cd $buildPath
+sed -i "s/$searchSentence/$searchSentence $sentenceToReplace/gi" Makefile
+cp configs/kernel-$version-$machine.config .config
+echo CONFIG_ACPI_EC_DEBUGFS=m >> .config
+make modules_prepare
+make M=drivers/acpi modules
+sudo make M=drivers/acpi modules_install
+sudo depmod -a
