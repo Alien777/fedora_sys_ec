@@ -9,5 +9,8 @@ I took commands from https://www.reddit.com/r/Fedora/comments/mbzj8h/ec_sys_modu
 * kernel-5.17.2-300.fc36.src.rpm
 * kernel-5.17.3-300.fc36.src.rpm
 * kernel-5.17.3-302.fc36.src.rpm
-* * Note: for this kernel I used parameter ./script https://fedora.cu.be/linux/development/36/Everything/source/tree/Packages/k/kernel-5.17.3-302.fc36.src.rpm - for more detail please read commit log
+  * Note: for this kernel I used parameter ./script https://fedora.cu.be/linux/development/36/Everything/source/tree/Packages/k/kernel-5.17.3-302.fc36.src.rpm - for more detail please read commit log
+* 5.17.5-300.fc36.src.rpm
+  * Note: example ./script https://fedora.cu.be/linux/development/36/Everything/source/tree/Packages/k/kernel-5.17.5-300.fc36.src.rpm - if You have a question, please send me question 
 ### Feel free to modify, change, distributed this script
+
