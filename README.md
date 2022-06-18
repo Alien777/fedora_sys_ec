@@ -16,5 +16,10 @@ I took commands from https://www.reddit.com/r/Fedora/comments/mbzj8h/ec_sys_modu
 * 5.17.7-300.fc36.x86_64.src.rpm
 * 5.17.8-300.fc36.x86_64.src.rpm
 * 5.17.9-300.fc36.x86_64.src.rpm
+* 5.17.10-300.fc36.x86_64.src.rpm - ?
+* 5.17.11-300.fc36.x86_64.src.rpm
+* 5.17.12-300.fc36.x86_64.src.rpm
+* 5.17.13-300.fc36.x86_64.src.rpm
+* 5.17.14-300.fc36.x86_64.src.rpm
+* 5.18.5-200.fc36.x86_64.src.rpm
 ### Feel free to modify, change, distributed this script
-
