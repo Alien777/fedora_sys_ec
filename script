@@ -13,7 +13,7 @@ rpmdev-setuptree
 if [ -z "$1" ]
 then
   echo "Download kernel source"
-  yumdownloader --source kernel
+  yumdownloader --source kernel-$kernel
 else
   echo "Download kernel source from url: "$1
   wget $1
