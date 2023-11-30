@@ -21,7 +21,7 @@ sudo modprobe ec_sys write_support=1
 ```
 ### Localization of ec file
 ```
-sudo modprobe ec_sys write_support=1
+/sys/kernel/debug/ec/ec0/io
 ```
 ## It has tested on Fedora 36, 37, 38, 39 for kernel:
 * kernel-5.17.1-300.fc36.src.rpm
