@@ -28,6 +28,10 @@ sed -i "s/$searchSentence/$searchSentence $sentenceToReplace/gi" Makefile
 cp configs/kernel-$version-$machine.config .config
 echo CONFIG_ACPI_EC_DEBUGFS=m >> .config
 make modules_prepare
+
+#added because in new kernel occurred problem
+export KBUILD_MODPOST_WARN=1 
+
 make M=drivers/acpi modules
 sudo make M=drivers/acpi modules_install
 sudo depmod -a

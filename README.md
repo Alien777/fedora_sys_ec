@@ -1,10 +1,33 @@
 # Bash script to enable ec module.
 Also I added script to disable fan on MSI GS66 12UGH
+or you can use
+https://github.com/dmitry-s93/MControlCenter
+
 ## You use this script at your own risk.
 
 I took commands from https://www.reddit.com/r/Fedora/comments/mbzj8h/ec_sys_module/
 
-## It has tested on Fedora 36 for kernel:
+##  Required packages 
+```
+dnf install rpmdevtools
+```
+```
+dnf install yum-utils
+```
+##  Additional info
+If doesn't work you can try disable secure boot in BIOS.
+You can add ec_sys.write_support=1 in /etc/default/grub.
+
+##  Usefull comends
+### Enable ec_sys module:
+```
+sudo modprobe ec_sys write_support=1
+```
+### Localization of ec file
+```
+sudo modprobe ec_sys write_support=1
+```
+## It has tested on Fedora 36, 37, 38, 39 for kernel:
 * kernel-5.17.1-300.fc36.src.rpm
 * kernel-5.17.2-300.fc36.src.rpm
 * kernel-5.17.3-300.fc36.src.rpm
@@ -22,4 +45,5 @@ I took commands from https://www.reddit.com/r/Fedora/comments/mbzj8h/ec_sys_modu
 * 5.17.13-300.fc36.x86_64.src.rpm
 * 5.17.14-300.fc36.x86_64.src.rpm
 * 5.18.5-200.fc36.x86_64.src.rpm
+* 6.6.2-201.fc39.src.rpm
 ### Feel free to modify, change, distributed this script
