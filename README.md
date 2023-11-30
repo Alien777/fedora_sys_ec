@@ -13,7 +13,7 @@ dnf install yum-utils
 * If doesn't work you can try disable secure boot in BIOS.
 * You can add ec_sys.write_support=1 in /etc/default/grub.
 * Also I added script to disable fan on MSI GS66 12UGH or you can use https://github.com/dmitry-s93/MControlCenter
-
+* Project which try to connect EC MSI with Linux Kernel: https://github.com/BeardOverflow/msi-ec
 ##  Usefull comends
 ### Enable ec_sys module:
 ```
