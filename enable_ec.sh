@@ -3,7 +3,7 @@
 kernel=$(uname -r)
 srcKernel=kernel-${kernel%.*}.src.rpm
 version=${kernel%%'-'*}
-buildPath=~/rpmbuild/BUILD/kernel-${kernel%-*}/linux-$kernel
+buildPath=~/rpmbuild/BUILD/kernel-${kernel%-*}-build/kernel-${kernel%-*}/linux-$kernel
 sentenceToReplace=${kernel:${#version}:${#kernel}}
 searchSentence='EXTRAVERSION ='
 machine=$(uname -m)
